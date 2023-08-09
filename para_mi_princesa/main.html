@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Comprobación Final</title>
+    <style>
+        .body{
+            background-color: rgb(20, 7, 167);
+            color: white;
+            stroke: black;
+            text-align: center;
+        }
+
+        .body__title{
+            color: white;
+            stroke: black;
+        }
+
+        .body__img{
+            width: 100%;
+            border-radius: 50%;
+        }
+
+        .boton{
+            background-color:blueviolet;
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            border-radius: 20%;
+        }
+
+        .boton:hover{
+           background-color:rgb(74, 21, 124);
+        }
+
+    </style>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body class="body">
+    <h1 class="body__title">¿Quieres que sígamos comprobando teorías juntos?</h1>
+    <img src="https://i.pinimg.com/originals/a4/24/df/a424df7afdf9458283c93f14aef66363.png" alt="" class="body__img">
+    <button id="yes" class="boton">Si quiero</button>
+    <button id="no" class="boton">No quiero</button>
+
+    <script>
+        const vutonSi = document.getElementById('yes');
+        const vutonNo = document.getElementById('no');
+
+        const somosNovios = () => {
+            alert('Oficialmente esto ya no es una hipótesis');
+            alert('Ahora sigamos comporbando más teorías juntos');
+            location.href = 'url';
+        }
+
+        const evitarKCRompa = () => {
+            vutonNo.style.position = 'absolute';
+            vutonNo.style.top = (Math.random() * window.innerHeight) + 'px';
+            vutonNo.style.left = (Math.random() * window.innerHeight) + 'px';
+        }
+
+        vutonSi.addEventListener('click', somosNovios);
+        vutonNo.addEventListener('mouseover', evitarKCRompa);
+    </script>
+</body>
+</html>
